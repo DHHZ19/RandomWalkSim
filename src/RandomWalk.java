@@ -23,13 +23,59 @@ public class RandomWalk {
 	}
 	
 	
-	void takeStep() {
+	 void takeStep() {
 		int randDirection;
 		randDirection = rand.nextInt(4);
 		switch(randDirection){
-		case 0: stepsTaken++;
+		case 0: 
+	    stepsTaken++;
+		System.out.printf("Moved Forward");
 		break;
-			
+		
+		case 1: 
+		stepsTaken++;
+		System.out.printf("Moved Right");
+		break;
+		
+		case 2: 
+		stepsTaken++;
+		System.out.printf("Moved Backward");
+		break;
+		
+		case 3: 
+	    stepsTaken++;
+		System.out.printf("Moved Forward");
+		break;
+		
+		default: 
+			System.out.println("Invalid Direction");
 		}
 	}
+	
+	 
+	 boolean moreSteps() {
+		 do {
+			 return true;
+		 }while(stepsTaken < maxSteps);
+		 
+	 }
+	 
+	 boolean inBounds() {
+		do {
+			return true;
+		}while((maxCoord > x) && (maxCoord > y));
+	 }
+	
+	public String toString() {
+		return("Steps: " + stepsTaken + "Poisiton: " + x + "," + y);
+	}
+	
+	public String walk(){
+		do {
+			takeStep();
+	 }while(moreSteps() && inBounds());
+		return toString();
+	}
+	
+	
 }
