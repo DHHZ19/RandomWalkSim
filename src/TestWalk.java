@@ -1,4 +1,3 @@
-
 import java.util.*;
 public class TestWalk {
 
@@ -12,9 +11,12 @@ public class TestWalk {
 			int x, y;		// starting x and y coordinated for walk
 			int randDirection;
 			
-			RandomWalk pos3 = new RandomWalk(200, 10, 0, 0);
-			pos3.walk();	
+			RandomWalk pos3 = new RandomWalk(500, 200,0,0);
+			pos3.walk();
+			System.out.println(pos3);
 			//RandomWalk pos = new RandomWalk(5, 10, 0, 0);
+
+		   
 			
 //			System.out.println("\nRandom Walk Test Program");
 //			System.out.println();
@@ -23,21 +25,15 @@ public class TestWalk {
 //			System.out.println("Enter the staring x and y coordiantes wihth space between: ");
 //			x = scan.nextInt();
 //			y = scan.nextInt();
-			
+//			RandomWalk pos1 = new RandomWalk( maxSteps = 0, maxCoord = 0, x , y);
+//			
 //			for(int i = 1; i <= 5; i++) {
-//			    pos.takeStep();
-//				System.out.println("HERE");
-//				pos.takeStep();
-//				System.out.println();
-//				pos.takeStep();
-//				System.out.println();
-//				pos.takeStep();					
-//	    }
-			
-		//	RandomWalk pos1 = new RandomWalk( maxSteps = 0, maxCoord = 0, x , y);
-			
-			
+//			    pos.takeStep();	
+//			    System.out.println(pos.toString());
+//			    pos1.takeStep();
+//			    System.out.println(pos1.toString());
+			    
+	    }	
 			
 	}
 
-}
